@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="Yireo_ExampleCheckoutChanges" type="Yireo\ExampleCheckoutChanges\Plugin\AddSkuToTotalsDataItems"/>
+    </type>
+
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="foobar" xsi:type="object">Yireo\ExampleCheckoutChanges\Checkout\FoobarConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
