@@ -1,4 +1,7 @@
-# README for Checkout
+# Example changes for legacy Luma checkout
+
+**This module is abandoned and no longer maintained. We have moved to our new [LokiCheckout](https://loki-checkout.com/) instead.**
+
 
 ### Things to inject into your checkout-based uiComponent
 - `Magento_Ui/js/model/messageList`
